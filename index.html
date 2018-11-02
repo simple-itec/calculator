@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Calculator</title>
+
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+
+	<script type="text/javascript" src="js/script.js"></script>
+</head>
+<body>
+	<div class="container">
+		<h1>Calculator</h1>
+		<div id="content-calc">
+			<form action="#" id="myform" method="post" name="kForm" onsubmit="return test()">
+				<fieldset>
+					<div class="rechnertitle">
+						<h2 class="rechner">Données personnelles</h2>
+					</div>
+						<div class="formrowpa">
+							<div class="formcolpa1">
+								<label>Prénom<sup>*</sup></label><br>
+								<input type="text" name="fVorname" class="formpafield" value="">
+							</div>
+							<div class="formcolpa2">
+								Nom<sup>*</sup><br>
+								<input type="text" name="fNachname" class="formpafield" value="">	
+							</div>
+						</div>
+						<div class="formrowpa">
+							<div class="formcolpa1">
+								Sexe<sup>*</sup><br>
+								<select name="fGender" size="1" class="formpafield">
+									<option value="0">Veuillez choisir</option>
+									<option value="w">féminin</option>
+									<option value="m">masculin</option>
+								</select>
+							</div>
+							<div class="formcolpa2">Date de naissance<sup>*</sup>
+																								<br>
+								<input type="text" name="fGebDatum" class="formpafield" value=""> <span class="explain">(par ex. 01.10.2011)</span>
+							</div>
+						</div>	
+						<div class="formrowpa">
+							<div class="formcolpa1">Début de l‘assurance<sup>*</sup>							
+							<br>
+								<input type="text" name="fVersichDatum" class="formpafield" value="01.12.2018">	
+							</div>
+							<div class="formcolpa2">
+								<div style="display: block; width: 100%; height: 19px; "></div><span class="explain">(par ex. 01.10.2011)</span></div>
+																								
+						</div>
+						<div class="seperator" style="clear: both"></div>								
+					<div class="rechnertitle">
+						<h2 class="rechner">Prestations désirées</h2>
+					</div>
+						<div class="formrowgl formrowgl-1">
+							<div class="formcolgl1">
+								<input type="checkbox" name="fIVRCheck" value="1">
+							</div>
+							<div class="formcolgl2">
+								<div class="gllabel"><div class="gllabelt"><b>Rente d’invalidité</b></div> <img src="images/fragezeichen.png" border="0" class="fragezeichen"></div><br>
+								<input type="text" name="fIVRValue" min="1000" class="formpafield" value="0.00"> <span class="explain">Rente annuelle d’invalidité en CHF</span>
+								
+							</div>
+						</div>
+						<div class="formrowgl formrowgl-2">
+							<div class="formcolgl1">
+								<input type="checkbox" name="fTodesfallCheck" value="1">
+							</div>
+							<div class="formcolgl2">
+								<div class="gllabel"><div class="gllabelt"><b>Capital-décès</b></div> <img src="images/fragezeichen.png" border="0" class="fragezeichen"></div><br>
+								<input type="text" name="fTodesfallValue" class="formpafield" value="0.00"> <span class="explain">Capital-décès en CHF</span><br>
+								<br>
+								<div class="gllabelt">Fumeur</div> <img src="images/fragezeichen.png" border="0" class="fragezeichen"><br>
+								<select name="fRaucher" size="1" class="formpafield">
+									<option value="nraucher">Non</option>
+									<option value="raucher">Oui</option>
+								</select>							
+							</div>
+						</div>	
+						<div class="formrowgl formrowgl-3">
+							<div class="formcolgl1">
+								<input type="checkbox" value="1" name="fWaisenCheck">
+							</div>
+							<div class="formcolgl2">
+								<div class="gllabel"><div class="gllabelt"><b>Rente d‘orphelin</b></div> <img src="images/fragezeichen.png" border="0" class="fragezeichen"></div><br>
+								<input type="text" min="1000" max="36000" name="fWaisenValue" class="formpafield" value="0.00"> <span class="explain">Rente annuelle d‘orphelin par enfant en CHF</span><br>
+								<br>
+								Nombre d‘enfants<br>
+								<select name="fWaisenAnz" size="1" class="formpafield">
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+									<option value="6">6</option>
+								</select>							
+							</div>
+						</div>
+						
+	
+						<div class="formrow required">
+							* champs à compléter
+						</div>
+						<div class="seperator"></div>	
+						
+						
+						<div class="formrow">
+							<input type="submit" value="Calculer la prime" name="berechnen" class="submitbutton"> 
+							<div class="resetbutton"><a href=""><img src="images/resetf.gif" border="0"></a></div>
+						</div>
+						<div class="seperator"></div>
+				</fieldset>										
+				</form>
+		</div>
+	</div>
+	
+
+</body>
+</html>

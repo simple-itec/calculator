@@ -1,2 +1,2 @@
 # calculator
-Test de formulaire avec Javascript
+Test de formulaire avec Javascript.
